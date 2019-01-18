@@ -7,8 +7,9 @@
             <h2>Admin Login</h2>
             <p>Please enter your user id and password</p>
             </div>
-                <form id="Login" action="<?= UrlUtil::getBaseUrl() . '/Controllers/UserController.php'?>" method="post">
+                <form id="Login" action="index.php" method="post">
                     <input type="hidden" name="action" value="login_process">
+                    <input type="hidden" name="controller" value="UserController">
                     <div class="form-group">
                         <input type="text" class="form-control" id="id" name="id" placeholder="User ID">
                     </div>
