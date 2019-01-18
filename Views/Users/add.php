@@ -1,4 +1,4 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]. "/Views/Common/header.php" ?>
+<?php include "./Views/Common/header.php" ?>
 <div class="container">
 <?php
 if (isset($message)):
@@ -9,8 +9,9 @@ if (isset($message)):
 <?php
 endif;
 ?>
-<form action="<?= UrlUtil::getBaseUrl() . '/Controllers/UserController.php'?>" method="post">
+<form action="index.php" method="post">
     <input type="hidden" name="action" value="add_save">
+    <input type="hidden" name="controller" value="<?= $controller ?>">
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" class="form-control" name="name">
@@ -26,4 +27,4 @@ endif;
     <input type="submit" class="btn btn-primary" value="Add New">
 </form>
 </div>
-<?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Common/footer.php" ?>
+<?php include "./Views/Common/footer.php" ?>

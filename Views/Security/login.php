@@ -1,4 +1,4 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]. "/Views/Common/login.header.php" ?>
+<?php include "./Views/Common/login.header.php" ?>
 <div class="container">
     <h1 class="form-heading">Poly Shop</h1>
     <div class="login-form">
@@ -29,4 +29,4 @@
     </div>
 </div>
 
-<?php include $_SERVER["DOCUMENT_ROOT"]. "/Views/Common/login.footer.php" ?>
+<?php include "./Views/Common/login.footer.php" ?>

@@ -17,16 +17,16 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="<?= UrlUtil::getBaseUrl() . '/Controllers/UserController.php' ?>">PolyShop</a>
+    <a class="navbar-brand" href="?controller=UserController">PolyShop</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="<?= UrlUtil::getBaseUrl() . '/Controllers/UserController.php' ?>">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="?controller=UserController">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= UrlUtil::getBaseUrl() . '/Controllers/UserController.php' ?>">Users</a>
+        <a class="nav-link" href="?controller=UserController">Users</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= UrlUtil::getBaseUrl() . '/Controllers/UserController.php?action=login' ?>">Login</a>
+        <a class="nav-link" href="?controller=UserController&action=login">Login</a>
       </li>
     </ul>
   </div>

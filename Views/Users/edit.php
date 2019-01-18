@@ -1,4 +1,4 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]. "/Views/Common/header.php" ?>
+<?php include "./Views/Common/header.php" ?>
 <div class="container">
 <?php
 if (isset($message)):
@@ -9,10 +9,8 @@ if (isset($message)):
 <?php
 endif;
 ?>
-<a  class="btn btn-primary"
-    href="<?= UrlUtil::getBaseUrl() . '/Controllers/UserController.php' ?>">List Users</a>
 <hr>
-<form action="<?= UrlUtil::getBaseUrl() . '/Controllers/UserController.php'?>" method="post">
+<form action="" method="post">
     <input type="hidden" name="action" value="edit_save">
     <div class="form-group">
       <label for="id">User ID:</label>
@@ -33,4 +31,4 @@ endif;
     <input type="submit" class="btn btn-primary" value="Update">
 </form>
 </div>
-<?php include $_SERVER["DOCUMENT_ROOT"] . "/Views/Common/footer.php" ?>
+<?php include "./Views/Common/footer.php" ?>
