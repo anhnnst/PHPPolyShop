@@ -66,22 +66,38 @@ switch ($action) {
         include('./Views/Users/find.php');
         break;
     case 'login':
+        //Auto login
+        if (isset($_COOKIE['userid'])){
+            $_SESSION['userid'] = $_COOKIE['userid'];
+            header("location: .?controller=UserController");
+        }
+
         include('./Views/Security/login.php');
         break;
     case 'login_process':
         $id = filter_input(INPUT_POST, 'id');
         $password = filter_input(INPUT_POST, 'password');
+        $remember = filter_input(INPUT_POST, 'remember');
 
         $ok = $userDao->CheckLogin($id, $password);
 
         if ($ok){
             $_SESSION['userid'] = $id;
-            $_COOKIE['userid'] = $id;
+            if ($remember != null) {
+                setcookie('userid', $id, 60 * 60 * 60 + time());
+            }
             header("location: .?controller=UserController");
         }else{
+            $user = $userDao->FindOne($id);
+
             $message = "Invalid username or password";
         }
         include('./Views/Security/login.php');
+        break;
+    case 'logout':
+        unset($_SESSION['userid']);
+        setcookie('userid', '', time() - 60);
+        header('location: .?controller=UserController&action=login');
         break;
     default:
         $users = $userDao->Find();

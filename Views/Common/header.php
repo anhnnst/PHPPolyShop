@@ -28,6 +28,9 @@
       <li class="nav-item">
         <a class="nav-link" href="?controller=UserController&action=login">Login</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?controller=UserController&action=logout">Logout</a>
+      </li>
     </ul>
   </div>
 </nav>

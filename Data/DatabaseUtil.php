@@ -58,6 +58,7 @@ class DatabaseUtil
             }
         }
         $results = $statement->execute();
+
         
         return $results;
     }

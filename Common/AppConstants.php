@@ -11,6 +11,7 @@ class AppConstants
     const BASE_URL = "http://localhost:63342/Lab02";
 
     const USER_CONTROLLER = "UserController";
+    const Product_CONTROLLER = "ProductController";
 
     public static function GET_SERVER_ROOT(){
         return $_SERVER["DOCUMENT_ROOT"] ;
